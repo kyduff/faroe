@@ -73,10 +73,34 @@ title: The Sheep Vote
 	<div class="container">
 		<h2 class="editable">Join us</h2>
 		<p class="editable" style="text-align: center;">Sign up to hear the latest news and progress in our fight for the sheep vote.</p>
-		<form action="{{ site.newsletter_action }}" method="post">
+		<form id="emailform" action="javascript: handleSubmit()">
 			<input type="text" name="email" placeholder="Email">
 			<input type="submit" value="Sign up"/>
 		</form>
+			<script>
+				async function handleSubmit() {
+
+					const url = {{ site.newsletter_action | jsonify }};
+
+					const data = new FormData(document.querySelector("#emailform"));
+					let email;
+					for (const [key, value] of data) {
+						email = value;
+					}
+
+					if (email) {
+						const res = await fetch(url, {
+							method: "POST",
+							mode: "no-cors",
+							headers: {
+								"Content-Type": "application/json"
+							},
+							body: JSON.stringify({ email })
+						})
+						window.location.href = "/added"
+					}
+				}
+			</script>
 	</div>
 </div>
 
