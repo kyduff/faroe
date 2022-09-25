@@ -4,19 +4,17 @@
 title: Cause Template
 url: https://clean-oryx.cloudvent.net
 baseurl:
-google_analytics_key:
+google_analytics_key: G-QZBMWF4WMF
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
-description: Jekyll template with example content for a not-for-profit organisation.
+description: Landing page for company selling data streams with data from social media feeds.
 author:
-  name:
-  email:
-  twitter: # twitter username without the @ symbol
+  name: Kyle Duffy
+  email: kylejduffy3@gmail.com
+  # twitter: # twitter username without the @ symbol
 social:
-  name: Cause Template
-  links:
-    - https://github.com/CloudCannon/cause-jekyll-template
+  name: Kyle Duffy
 
 # -----
 # Build
